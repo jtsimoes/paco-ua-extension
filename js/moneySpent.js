@@ -22,11 +22,12 @@ function parseMainTable (table){
 	sum = 0;
 	// Go Through each row
 	for(i=2;i<table.length-3;i++){
-        row = table[i].children;
-        //console.log(row);
-        text = row[1].innerHTML;
-        value = text.split(" ")[0].replace(",",".");
-		sum = sum + parseFloat(value);
+		row = table[i].children;
+		if (row[6].innerHTML == "Regular"){
+        	text = row[1].innerHTML;
+        	value = text.split(" ")[0].replace(",",".");
+			sum = sum + parseFloat(value);
+		}
 	};
 	stats = {};
 	stats["totalmoney"] = sum;
