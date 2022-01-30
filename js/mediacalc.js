@@ -22,9 +22,10 @@ function writeStats(stats){
 	//Create Element to add
 	var newNode2 = document.createElement("tr");
 	newNode2.className = "table_cell_impar";
+	newNode2.setAttribute("style", "font-weight: bold;");
 	var newTd1 = document.createElement("td");
 	newTd1.setAttribute("align", "left");
-	newTd1.innerText = "Media Ponderada";
+	newTd1.innerText = "Média Ponderada";
 	var newTd2 = document.createElement("td");
 	newTd2.setAttribute("align", "right");
 	newTd2.innerText = stats["media"].toFixed(2);
