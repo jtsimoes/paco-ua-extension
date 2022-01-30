@@ -1,10 +1,10 @@
-mainTable = document.querySelector("#template_main > table:nth-child(6) > tbody:nth-child(1)").children;
+mainTable = document.querySelector("#template_main > table:nth-child(5) > tbody:nth-child(1)").children;
 stats = parseMainTable(mainTable);
 writeStats(stats);
 
 // Write stats on table at the end of page
 function writeStats(stats){
-	tableToWrite = document.querySelector("#template_main > table:nth-child(8) > tbody:nth-child(1)");
+	tableToWrite = document.querySelector("#template_main > table:nth-child(7) > tbody:nth-child(1)");
 	
 	//Create Element to add
 	var newNode1 = document.createElement("tr");
