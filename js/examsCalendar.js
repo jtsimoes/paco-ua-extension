@@ -27,7 +27,7 @@ function parseRow(row){
     var disciplina, data, obs, sala, epoca;
     var link;
 
-    tempD = row[2].innerText.replace(" DE ", " ").replace(" E "," ").replace(" À "," ").replace(" AOS "," ").replace(" PARA "," ").split(" ");
+    tempD = row[2].innerText.replace(" DE ", " ").replace(" E "," ").replace(" À "," ").replace(" AOS "," ").replace(" PARA "," ").replace(" NAS "," ").replace(" A "," ").replace(" EM "," ").split(" ");
     disciplina = "";
     for (var j = 0; j < tempD.length; j++){
         //Check if 'I' is a letter or a roman number
