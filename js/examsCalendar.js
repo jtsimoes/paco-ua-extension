@@ -1,6 +1,16 @@
 mainTable = document.querySelector("#form2 > table:nth-child(2) > tbody:nth-child(1)").children;
 parseMainTable(mainTable);
 
+var newCol = document.createElement("td");
+newCol.className = "table_topcol";
+
+var newColText = document.createElement("font");
+newColText.innerHTML = "Calen<br>dário";
+newColText.setAttribute("color", "white");
+
+newCol.appendChild(newColText);
+document.querySelector("#form2 > table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(2)").appendChild(newCol);
+
 function parseMainTable(table){
     var i;
     var row;
@@ -14,7 +24,7 @@ function parseMainTable(table){
 function parseRow(row){
     var tempDate, tempHours;
     var datestart, dateend;
-    var disciplina, data, codigo, sala, epoca;
+    var disciplina, data, obs, sala, epoca;
     var link;
 
     tempD = row[2].innerText.replace(" DE ", " ").replace(" E "," ").replace(" À "," ").replace(" AOS "," ").replace(" PARA "," ").split(" ");
@@ -28,12 +38,12 @@ function parseRow(row){
             //If not, write just the first letter
         	disciplina = disciplina + tempD[j][0];
     }
-    codigo = row[1].innerText;
+    obs = row[7].innerText;
     sala = row[4].innerText;
     if (row[6].innerText == "DZ")
-        epoca = "Especial";
+        epoca = "Época Especial";
     else if (row[6].innerText == "FN")
-        epoca = "Normal";
+        epoca = "Final";
     else if (row[6].innerText == "RE")
         epoca = "Recurso";
     else 
@@ -49,12 +59,12 @@ function parseRow(row){
     //Create link
     link = new URL("https://www.google.com/calendar/render");
     link.searchParams.append("action", "TEMPLATE");
-    link.searchParams.append("text", "[" + disciplina + "] " + epoca);
+    link.searchParams.append("text", "[" + disciplina + "] Exame " + epoca);
     datestart = data.toISOString().replace(/-|:|\.\d\d\d/g,"");
     data.setHours(data.getHours() + 2);
     dateend = data.toISOString().replace(/-|:|\.\d\d\d/g,"");
     link.searchParams.append("dates", datestart + "/" + dateend)
-    link.searchParams.append("details", "Codigo: " + codigo);
+    link.searchParams.append("details", obs);
     link.searchParams.append("location", sala);
     link.searchParams.append("sf", "true");
     link.searchParams.append("output", "xml");
@@ -70,7 +80,8 @@ function parseRow(row){
     imgElement.setAttribute("src", chrome.extension.getURL("img/calendar.png"));
     imgElement.setAttribute("height", "30");
     imgElement.setAttribute("width", "30");
-    imgElement.setAttribute("alt", "Calendar Icon");
+    imgElement.setAttribute("alt", "Google Calendar");
+    imgElement.setAttribute("title", "Adicionar ao calendário");
 
     linkElement.appendChild(imgElement);
     newNode.appendChild(linkElement);
