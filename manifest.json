@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "PACO UA Extension",
-    "version": "0.37",
+    "version": "0.38",
 
     "description": "Adiciona funcionalidade ao antigo PACO da Universidade de Aveiro",
 
@@ -22,6 +22,10 @@
         {
             "matches": ["https://paco.ua.pt/secvirtual/c_estadoDasProprinas.asp"],
             "js": ["js/moneySpent.js"]
+        },
+        {
+            "matches": ["https://paco.ua.pt/Inquerito.asp"],
+            "js" : ["js/skipSurvey.js"]
         },
         {
             "matches": ["https://paco.ua.pt/*"],
