@@ -1,25 +1,60 @@
-# paco_ua_extension
-Extensão que adiciona funcionalidade ao PACO.
+# PACO UA Extension
+Extensão que adiciona funcionalidades extra ao [PACO (Portal Académico Online da Universidade de Aveiro)](https://paco.ua.pt/).
 
-Ainda em fase inicial.
+## Funcionalidades:
 
-Features atuais:
-* Mostra a média ponderada na página plano curricular
-* Adicionar exames ao google calendar com um clique
-* Mostra o total gasto em propinas
+- [x] Adiciona os exames ao Google Calendar com um clique, na página ["Calendário de Exames do Aluno"](https://paco.ua.pt/secvirtual/c_calendarioDeExames.asp);
 
-Features para adicionar:
-* ...
+    | Antes | Depois |
+    | :-: | :-: |
+    | ![Calendário de exames antes](/../docs/exams-before.png) | ![Calendário de exames depois](/../docs/exams-after.png) |
 
-## Installation
+- [x] Mostra a média ponderada das disciplinas com aproveitamento até à data, na página ["Plano Curricular"](https://paco.ua.pt/secvirtual/c_planocurr.asp);
 
-Chrome: [Webstore Link](https://chrome.google.com/webstore/detail/paco-ua-extension/lcgdmdafgpgplkiaiifgamdkcnpnnopp)
+    | Antes | Depois |
+    | :-: | :-: |
+    | ![Plano curricular antes](/../docs/average-before.png) | ![Plano curricular depois](/../docs/average-after.png) |
 
-Firefox: [Download signed extension](https://github.com/DCruzDev/paco_ua_extension/releases/latest)
+- [x] Mostra o total gasto em propinas até ao momento, na página ["Estado das Propinas"](https://paco.ua.pt/secvirtual/c_estadoDasProprinas.asp);
 
-## Contributors (Big Thanks)
+    | Antes | Depois |
+    | :-: | :-: |
+    | ![Estado das propinas antes](/../docs/tuition-before.png) | ![Estado das propinas depois](/../docs/tuition-after.png) |
 
-@RodrigoRosmaninho
-@rodrigogonegit
-@jtsimoes
+<!-- - [ ] Inverte dias da semana e horas do dia, *brevemente* na página ["Horário"](https://paco.ua.pt/secvirtual/c_estadoDasProprinas.asp); -->
+
+- [x] Alinha todas as páginas ao centro;
+
+- [x] Ignora o pop-up de preenchimento do inquérito pedagógico;
+
+<!-- - [ ] Implementa dark mode em todas as páginas, *brevemente* -->
+
+- [ ] ...
+
+## Instalação:
+
+### Chrome:
+
+1. Fazer download do repositório [aqui](https://github.com/jtsimoes/paco_ua_extension/archive/master.zip);
+1. Extrair o `.zip`;
+1. Aceder à página das extensões (`chrome://extensions/`);
+1. Ativar o "Modo de programador" (canto superior direito);
+1. Clicar em "Carregar expandida";
+1. Localizar a pasta do `.zip` que extraiu (*paco_ua_extension-master*) e selecionar;
+1. Voltar a desativar o "Modo de programador" (opcional);
+1. Feito.
+
+### Firefox:
+
+- *(brevemente)*
+
+## Contribuições:
+
+[@DCruzDev (autor)](https://github.com/DCruzDev)
+
+[@RodrigoRosmaninho](https://github.com/RodrigoRosmaninho)
+
+[@rodrigogonegit](https://github.com/rodrigogonegit)
+
+[@jtsimoes](https://github.com/jtsimoes)
 

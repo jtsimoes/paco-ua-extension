@@ -3,7 +3,7 @@
     "name": "PACO UA Extension",
     "version": "0.39",
 
-    "description": "Adiciona funcionalidade ao antigo PACO da Universidade de Aveiro",
+    "description": "Extensão que adiciona funcionalidades extra ao PACO (Portal Académico Online da Universidade de Aveiro)",
 
     "icons": { 
         "16": "logo16.png",
