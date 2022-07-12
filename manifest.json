@@ -1,14 +1,15 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "PACO UA Extension",
-    "version": "0.38",
+    "version": "0.39",
 
     "description": "Adiciona funcionalidade ao antigo PACO da Universidade de Aveiro",
 
     "icons": { 
         "16": "logo16.png",
         "48": "logo48.png",
-        "128": "logo.png" },
+        "128": "logo.png"
+    },
     
     "content_scripts": [
         {
@@ -25,15 +26,18 @@
         },
         {
             "matches": ["https://paco.ua.pt/Inquerito.asp"],
-            "js" : ["js/skipSurvey.js"]
+            "js": ["js/skipSurvey.js"]
         },
         {
             "matches": ["https://paco.ua.pt/*"],
-            "css" : ["css/centerPages.css"]
+            "css": ["css/centerPages.css"]
         }
     ],
 
     "web_accessible_resources": [
-        "img/calendar.png"
+        {
+            "resources": ["img/calendar.png"],
+            "matches": ["https://paco.ua.pt/*"]
+        }
     ]
 }

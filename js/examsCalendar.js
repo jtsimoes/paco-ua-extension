@@ -77,7 +77,7 @@ function parseRow(row){
     linkElement.setAttribute("href", link);
     linkElement.setAttribute("target", "_blank");
 
-    imgElement.setAttribute("src", chrome.extension.getURL("img/calendar.png"));
+    imgElement.setAttribute("src", chrome.runtime.getURL("img/calendar.png"));
     imgElement.setAttribute("height", "30");
     imgElement.setAttribute("width", "30");
     imgElement.setAttribute("alt", "Google Calendar");
