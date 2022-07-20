@@ -1,5 +1,5 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "PACO UA Extension",
     "version": "0.40",
 
@@ -35,6 +35,9 @@
     ],
 
     "web_accessible_resources": [
-        "img/calendar.png"
+        {
+            "resources": ["img/calendar.png"],
+            "matches": ["https://paco.ua.pt/*"]
+        }
     ]
 }
