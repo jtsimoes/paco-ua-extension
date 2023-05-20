@@ -21,6 +21,12 @@ Extensão que adiciona funcionalidades extra ao [PACO (Portal Académico Online 
     | :-: | :-: |
     | ![Estado das propinas antes](/../docs/tuition-before.png) | ![Estado das propinas depois](/../docs/tuition-after.png) |
 
+- [x] Corrige a ordenação dos exames por data, na página ["Calendário de Exames do Aluno"](https://paco.ua.pt/secvirtual/c_calendarioDeExames.asp);
+
+    | Antes | Depois |
+    | :-: | :-: |
+    | ![Ordenação dos exames antes](/../docs/sorting-before.png) | ![Ordenação dos exames depois](/../docs/sorting-after.png) |
+
 <!-- - [ ] Inverte dias da semana e horas do dia, *brevemente* na página ["Horário"](https://paco.ua.pt/secvirtual/c_estadoDasProprinas.asp); -->
 
 - [x] Alinha todas as páginas ao centro;
