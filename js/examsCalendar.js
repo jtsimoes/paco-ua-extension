@@ -90,3 +90,21 @@ function parseRow(row){
     
 }
 
+// Sort exams by date correctly
+var exams = Array.from(document.querySelectorAll("form#form2 > table > tbody > tr[class^='table_cell_']"));
+
+exams.sort(function(a, b) {
+    const [dayA, monthA, yearA] = a.querySelector('td:nth-child(1)').innerText.split('/');
+    const [dayB, monthB, yearB] = b.querySelector('td:nth-child(1)').innerText.split('/');
+
+    const dateA = new Date(`${yearA}-${monthA}-${dayA}`);
+    const dateB = new Date(`${yearB}-${monthB}-${dayB}`);
+
+    return dateA - dateB;
+});
+
+var examsTable = document.querySelector("form#form2 > table > tbody");
+
+exams.forEach(function(exam) {
+    examsTable.insertBefore(exam, examsTable.rows[examsTable.rows.length - 2]);
+});
