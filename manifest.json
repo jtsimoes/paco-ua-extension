@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "PACO UA Extension",
-    "version": "0.41",
+    "version": "0.42",
 
     "description": "Extensão que adiciona funcionalidades extra ao PACO (Portal Académico Online da Universidade de Aveiro)",
 

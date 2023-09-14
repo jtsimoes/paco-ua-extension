@@ -49,25 +49,34 @@ function parseRow(row){
     else 
         epoca = "";
     tempDate = row[0].innerText.split("/");
-    tempHours = row[3].innerText.split(":")
+    tempHours = row[3].innerText.split(":");
+
     data = new Date();
     data.setDate(tempDate[0]);
     data.setMonth(tempDate[1]-1);
     data.setFullYear(tempDate[2]);
-    data.setHours(tempHours[0],tempHours[1],0);
+    //Handle cases where the exam takes place throughout all day
+    if (tempHours.length == 2)
+        data.setHours(tempHours[0],tempHours[1],0);
+    else
+        data.setHours(0,0,0);
 
     //Create link
-    link = new URL("https://www.google.com/calendar/render");
+    link = new URL("https://calendar.google.com/calendar/render");
     link.searchParams.append("action", "TEMPLATE");
     link.searchParams.append("text", "[" + disciplina + "] Exame " + epoca);
+
     datestart = data.toISOString().replace(/-|:|\.\d\d\d/g,"");
-    data.setHours(data.getHours() + 2);
-    dateend = data.toISOString().replace(/-|:|\.\d\d\d/g,"");
+    if (tempHours.length == 2){
+        data.setHours(data.getHours() + 2);
+        dateend = data.toISOString().replace(/-|:|\.\d\d\d/g,"");
+    } else {
+        dateend = datestart = datestart.split("T")[0];
+    }
+
     link.searchParams.append("dates", datestart + "/" + dateend)
     link.searchParams.append("details", obs);
     link.searchParams.append("location", sala);
-    link.searchParams.append("sf", "true");
-    link.searchParams.append("output", "xml");
 
     //Insert link to create event in table
     var newNode = document.createElement("td");
