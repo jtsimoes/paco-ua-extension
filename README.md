@@ -1,3 +1,6 @@
+> [!IMPORTANT]  
+> Esta extensão encontra-se **descontinuada** desde o dia 25 de março de 2024 devido ao [lançamento do PACO 2.0](https://www.ua.pt/pt/noticias/11/86116), uma versão melhor e mais moderna do [antigo Portal Académico](https://paco.ua.pt/), o qual agora já contém funcionalidades que esta extensão oferecia. Assim, instalar esta extensão já não terá qualquer efeito.
+
 # PACO UA Extension
 Extensão que adiciona funcionalidades extra ao [PACO (Portal Académico Online da Universidade de Aveiro)](https://paco.ua.pt/).
 
@@ -41,13 +44,13 @@ Extensão que adiciona funcionalidades extra ao [PACO (Portal Académico Online 
 
 ### Chrome:
 
-1. Fazer download do repositório [aqui](https://github.com/jtsimoes/paco_ua_extension/archive/master.zip);
+1. Fazer download do repositório [aqui](https://github.com/jtsimoes/paco_ua_extension/archive/main.zip);
 1. Extrair o `.zip`;
 1. Aceder à página das extensões (`chrome://extensions/`);
 1. Ativar o "Modo de programador" (canto superior direito);
 1. Clicar em "Carregar expandida";
-1. Localizar a pasta do `.zip` que extraiu (*paco_ua_extension-master*) e selecionar;
-1. Voltar a desativar o "Modo de programador" (opcional);
+1. Localizar a pasta do `.zip` que extraiu (*paco_ua_extension-main*) e selecionar;
+1. Voltar a desativar o "Modo de programador";
 1. Feito.
 
 ### Firefox:
